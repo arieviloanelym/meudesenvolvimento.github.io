@@ -1,4 +1,4 @@
-# meudesenvolvimento
+# meu primeiro APP de vendas em Python
 print('Bem Vindo a Loja da Mylena Cristina Arruda de Oliveira')#RU 1991399
 valor_ori=float(input('Digite o valor do produto:'))
 qtd=int(input('Digite a quantidade desejada:'))
