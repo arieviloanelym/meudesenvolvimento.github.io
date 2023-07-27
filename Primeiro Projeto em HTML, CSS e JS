@@ -1,4 +1,4 @@
-<p>Faça um programa para calcular o valor de uma viagem.</p><br> 
+<<p>Faça um programa para calcular o valor de uma viagem.</p><br> 
 
 <h4>Você terá 3 variaveis, sendo elas;</h4> <br>
 <ul>
@@ -12,13 +12,13 @@
 
 <form id="formulario combustivel">
     <label for="precoCombustivel">Preço do Combustível por Litro (R$):</label>
-    <input type="number" id="precoCombustivel" step="0.01" required><br><br>
+    <input type="text" id="precoCombustivel"required><br><br>
 
     <label for="gastoMedioKm">Consumo por Litro (km/l):</label>
-    <input type="number" id="gastoMedioKm" step="0.01" required><br><br>
+    <input type="text" id="gastoMedioKm" required><br><br>
 
     <label for="distanciaKm">Distância Percorrida (km):</label>
-    <input type="number" id="distanciaKm" step="0.01" required><br><br>
+    <input type="text" id="distanciaKm" required><br><br>
 
     <button type="button" onclick="calculateGastoComb()">Calcular</button>
   </form>
@@ -47,16 +47,27 @@ h4 {
   font-weight: bold;
 }
 
-function calculateGastoComb(){
-      const precoCombustivel = parseFloat(document.getElementById("precoCombustivel").value);                         
-      const gastoMedioKm = parseFloat(document.getElementById("gastoMedioKm").value);
-      const distaciaKm = parseFloat(document.getElementById("distaciaKm").value);
+form {
+  font-family: arial;
+  font-weight: bold;
+}
 
-   if (isNaN(precoCombustivel) || isNaN(gastoMedioKm) || isNaN(distaciaKm)) {
-        alert('Por favor, insira valores numéricos válidos.');
-        return;
-      }
-  
-      const gastoPorLitros = (distaciaKm / gastoMedioKm) * precoCombustivel;
-document.getElementById("resultado").innerText = `Valor Gasto em Combustível: R$ ${gastoPorLitros.toFixed(2)}`;
+button {
+  font-family:arial;
+  font-weight: bold;
+  background: pink; 
+}
+
+function calculateGastoComb(){
+      var precoCombustivel = document.getElementById("precoCombustivel").value;
+      var gastoMedioKm = document.getElementById("gastoMedioKm").value;
+                  var distanciaKm = document.getElementById("distanciaKm").value;
+     var gastoPorLitros = (distanciaKm / gastoMedioKm) * precoCombustivel;
+console.log(precoCombustivel);
+console.log(gastoMedioKm);
+console.log(distanciaKm);
+console.log(gastoPorLitros);
+gastoPorLitros = gastoPorLitros.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+document.getElementById("resultado").innerText = "Valor Gasto em Combustível:" + gastoPorLitros;
+
     }
