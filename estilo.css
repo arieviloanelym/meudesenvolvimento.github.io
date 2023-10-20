@@ -1,0 +1,33 @@
+body{
+  background: #ff50f0;
+}
+ul {
+  font-family: arial;
+  background: #fffff;  
+  color: black;
+}
+
+p {
+  font-family: arial;
+  color: black;
+  font-weight: bold;
+  background: pink;
+  text-align: center;
+}
+
+h4 {
+  font-family: arial;
+  color: black;
+  font-weight: bold;
+}
+
+form {
+  font-family: arial;
+  font-weight: bold;
+}
+
+button {
+  font-family:arial;
+  font-weight: bold;
+  background: pink; 
+}
